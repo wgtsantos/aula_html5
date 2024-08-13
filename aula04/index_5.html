@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Formulário HTML5 </title>
+</head>
+<body>
+
+    <h2> Outras Opções de Formulário </h2>
+
+    <fieldset>
+        <legend> Casdastro Geral </legend>
+
+        <form action="enviar.php" method="get" name="cadastro"
+        oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+            <label> Idade: </label>
+            <input type="number" id="idade" name="idade" min="1" max="99" required/>
+            <br/> <br/>
+            <label> Cor: </label>
+            <input type="color" id="cor" name="cor" value="null"/>
+            <br/> <br/>
+            <label> Volume: </label>
+            <input type="range" id="volume" name="volume" min="10" max="50" required/>
+            <br/> <br/>
+            <label> Mês: </label>
+            <input type="month" id="mes" name="mes" min="2000-01" max="2024-12" required/>
+            <br/> <br/>
+            <label> Semana: </label>
+            <input type="week" id="semana" name="semana" required/>
+            <br/> <br/>
+            <label> Horário: </label>
+            <input type="time" id="horario" name="horario" min="12:00" max="17:30" required/>
+            <br/> <br/>
+            <label> Data e Hora: </label>
+            <input type="datetime-local" id="data_hora" name="data_hora" 
+            min="2024-08-13T17:30" max="2024-12-30T23:59" required/>
+            <br/> <br/>
+            <label> Telefone: </label>
+            <input type="tel" id="telefone" name="telefone" required/>
+            <br/> <br/>
+            <label> Site: </label>
+            <input type="url" id="site" name="site" required/>
+            <br/> <br/>
+            <label> Navegadores: </label>
+            <input list="navegadores" required>
+            <datalist id="navegadores">
+                <option value="Edge">
+                <option value="Google Chrome">
+                <option value="Mozilla FireFox">
+                <option value="Opera GX">
+                <option value="Safari 9">
+            </datalist>
+            <br/> <br/>
+            <label> Nível de Volume: </label>
+            <!-- <label> 0 </label> -->
+            <input type="range" id="a" name="a" value="0" min="0" max="100" required/>
+            <!-- <label> 100 + </label> -->
+            <input type="hidden" id="b" name="b" value="0" min="0" max="100"
+            disabled />
+            <!-- <label> = </label> -->
+            <output name="x" for="a b">0</output>
+            <br/> <br/>
+            <button type="submit" id="cadastrar" name="cadastrar">
+                <img src="img/inscreva-se.png"
+                width="200" height="50" alt="inscrever"/>
+            </button>
+
+        </form>
+        
+    </fieldset>
+    
+</body>
+</html>
